@@ -1,44 +1,29 @@
-import React, { useEffect, useState } from "react";
-
-function ScholarshipTable() {
-  const [scholarships, setScholarships] = useState([]);
-  useEffect(() => {
-    const stored = localStorage.getItem("scholarships");
-    if (stored) {
-      setScholarships(JSON.parse(stored));
-    }
-  }, []);
-
+function ScholarshipTable({ scholarships }) {
   return (
     <div>
       <table className="table">
-        <tr>
-          <th>Scholarship Name</th>
-          <th>Organization</th>
-          <th>Amount</th>
-          <th>Due Date</th>
-          <th>Status</th>
-          <th>Note</th>
-        </tr>
-        <tr>
-          <td>AAP Scholarship</td>
-          <td>UCLA AAP</td>
-          <td>$1000</td>
-          <td>08/03/2025</td>
-          <td>Submitted</td>
-          <td>this is</td>
-        </tr>
-        <tr>
-          <td>SMC Scholarship</td>
-          <td>SMC</td>
-          <td>$2000</td>
-          <td>08/06/2025</td>
-          <td>Not started</td>
-          <td>
-            this is a very long sentence hopefully it runs out of page. helloooooooooo so excited
-            ahhhhhhhhhhhhhh
-          </td>
-        </tr>
+        <thead>
+          <tr>
+            <th>Scholarship Name</th>
+            <th>Organization</th>
+            <th>Amount</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          {scholarships.map((scholarship, index) => (
+            <tr key={index}>
+              <td>{scholarship.name}</td>
+              <td>{scholarship.org}</td>
+              <td>${scholarship.amount}</td>
+              <td>{scholarship.due}</td>
+              <td>{scholarship.status}</td>
+              <td>{scholarship.note}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );
