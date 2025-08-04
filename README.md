@@ -4,8 +4,8 @@ This project aims to make keeping track of scholarship applications more conveni
 
 ## Key features and functionality
 
-- Add Scholarship: Add a scholarship to the table by entering and submiting a form
-- Delete Scholarship: A scholarship can be deleted by selecting the scholarship in the "Select" column and clicking "Delete."
+- Add Scholarship: Add a scholarship to the table by filling out entry fields. Status is selected from a dropdown menu for  convenience.
+- Delete Scholarship: A scholarship can be deleted by checking corresponding box for the scholarship in the "Select" column and clicking "Delete."
 - Form Validation: Input fields are validated before scholarship is added to table.
 - Status Tags: status tags are colored for quick visual reference.
 
