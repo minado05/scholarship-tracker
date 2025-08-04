@@ -1,6 +1,7 @@
 # Project Summary
 
 This project aims to make keeping track of scholarship applications more convenient for students.
+Note: Please use with light mode for a better experience. 
 
 ## Key features and functionality
 
