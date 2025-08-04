@@ -21,7 +21,9 @@ function ScholarshipForm({ addScholarship }) {
   const validate = () => {
     const newErrors = {};
     if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.amount.trim()) newErrors.amount = "Amount is required";
+    if (!formData.amount || Number(formData.amount) < 0) {
+      newErrors.amount = "Must be a positive value";
+    }
     if (!formData.org.trim()) newErrors.org = "Organization is required";
     if (!formData.due.trim()) newErrors.due = "Due Date is required";
     if (!formData.status.trim()) newErrors.status = "Status is required";
