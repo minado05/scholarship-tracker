@@ -4,10 +4,11 @@ function ScholarshipForm({ addScholarship }) {
   const [formData, setFormData] = useState({
     name: "",
     org: "",
-    amount: "",
+    amount: 0,
     due: "",
     status: "",
     note: "",
+    isSelected: false,
   });
   const [errors, setErrors] = useState({});
 
@@ -31,10 +32,16 @@ function ScholarshipForm({ addScholarship }) {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length === 0) {
-      console.log("Submitting:", formData); // ✅ add this
-
       addScholarship(formData);
-      setFormData({ name: "", org: "", amount: "", due: "", status: "", note: "" });
+      setFormData({
+        name: "",
+        org: "",
+        amount: 0,
+        due: "",
+        status: "",
+        note: "",
+        isSelected: false,
+      });
       setErrors({});
     } else {
       setErrors(validationErrors);

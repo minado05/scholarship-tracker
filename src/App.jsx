@@ -16,10 +16,23 @@ function App() {
   const addScholarship = (newScholarship) => {
     setScholarships((prev) => [...prev, newScholarship]);
   };
+
+  const setIsSelected = (index) => {
+    setScholarships((prev) =>
+      prev.map((scholarship, i) =>
+        i === index ? { ...scholarship, isSelected: !scholarship.isSelected } : scholarship
+      )
+    );
+  };
+
   return (
     <div>
       <h1>Scholarship Tracker</h1>
-      <ScholarshipTable scholarships={scholarships} />
+      <ScholarshipTable
+        scholarships={scholarships}
+        setIsSelected={setIsSelected}
+        setScholarships={setScholarships}
+      />
       <ScholarshipForm addScholarship={addScholarship} />
     </div>
   );
