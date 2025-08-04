@@ -1,12 +1,22 @@
-# React + Vite
+# Project Summary
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project aims to make keeping track of scholarship applications more convenient for students.
 
-Currently, two official plugins are available:
+## Key features and functionality
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add Scholarship: Add a scholarship to the table by entering and submiting a form
+- Delete Scholarship: A scholarship can be deleted by selecting the scholarship in the "Select" column and clicking "Delete."
+- Form Validation: Input fields are validated before scholarship is added to table.
+- Status Tags: status tags are colored for quick visual reference.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- localStorage
+
+## Instructions for use
+
+1. Begin by adding a scholarship by clicking on the "Add Scholarship" button
+2. Fill out the details as requested and click submit
+3. To close the form, click "Hide Form" at the top.
+4. To delete a scholarship, select the scholarship in the "Select" column and click the "Delete" button.
