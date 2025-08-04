@@ -2,6 +2,8 @@ function ScholarshipTable({ scholarships, setIsSelected, setScholarships }) {
   return (
     <div>
       <button
+        className="button"
+        style={{ background: "#fff78cff" }}
         onClick={() =>
           setScholarships(scholarships.filter((scholarship) => !scholarship.isSelected))
         }
@@ -25,8 +27,9 @@ function ScholarshipTable({ scholarships, setIsSelected, setScholarships }) {
             <tr key={index}>
               <td>
                 <input
-                  type="checkbox"
-                  checked={scholarship.isSelected}
+                  type="radio"
+                  name="scholarship_selected"
+                  value={index}
                   onChange={() => setIsSelected(index)}
                 />
               </td>
@@ -34,7 +37,21 @@ function ScholarshipTable({ scholarships, setIsSelected, setScholarships }) {
               <td>{scholarship.org}</td>
               <td>${scholarship.amount}</td>
               <td>{scholarship.due}</td>
-              <td>{scholarship.status}</td>
+              <td
+                style={{
+                  background:
+                    scholarship.status === "rejected"
+                      ? "#f05656ff"
+                      : scholarship.status === "awarded"
+                      ? "#61f28dff"
+                      : scholarship.status === "submitted"
+                      ? "#fed462ff"
+                      : "#9cc0efff",
+                  borderRadius: "15px",
+                }}
+              >
+                {scholarship.status}
+              </td>
               <td>{scholarship.note}</td>
             </tr>
           ))}

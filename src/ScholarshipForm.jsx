@@ -91,7 +91,13 @@ function ScholarshipForm({ addScholarship }) {
         <label>
           Status:
           <br />
-          <input type="text" name="status" value={formData.status} onChange={handleChange} />
+          <select name="status" value={formData.status} onChange={handleChange}>
+            <option value="">select status</option>
+            <option value="not started">not started</option>
+            <option value="submitted">submitted</option>
+            <option value="awarded">awarded</option>
+            <option value="rejected">rejected</option>
+          </select>
           {errors.status && <p style={{ color: "red" }}>{errors.status}</p>}
         </label>
         <br />

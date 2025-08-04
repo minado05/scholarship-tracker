@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import ScholarshipTable from "./ScholarshipTable.jsx";
 import ScholarshipForm from "./ScholarshipForm.jsx";
 
@@ -8,6 +8,11 @@ function App() {
     const saved = localStorage.getItem("scholarships");
     return saved ? JSON.parse(saved) : [];
   });
+  const [showForm, setShowForm] = useState(false);
+
+  const toggleForm = () => {
+    setShowForm(!showForm);
+  };
 
   React.useEffect(() => {
     localStorage.setItem("scholarships", JSON.stringify(scholarships));
@@ -17,6 +22,7 @@ function App() {
     setScholarships((prev) => [...prev, newScholarship]);
   };
 
+  //toggle isSelected of checked item
   const setIsSelected = (index) => {
     setScholarships((prev) =>
       prev.map((scholarship, i) =>
@@ -33,7 +39,10 @@ function App() {
         setIsSelected={setIsSelected}
         setScholarships={setScholarships}
       />
-      <ScholarshipForm addScholarship={addScholarship} />
+      <button className="button" onClick={toggleForm}>
+        {showForm ? "Hide Form" : "Add Scholarship"}
+      </button>
+      {showForm && <ScholarshipForm addScholarship={addScholarship} />}{" "}
     </div>
   );
 }
