@@ -1,7 +1,7 @@
 # Project Summary
 
-This project aims to make keeping track of scholarship applications more convenient for students.
-Note: Please use with light mode for a better experience (to be updated)
+This project aims to make keeping track of scholarship applications more convenient for students. Available on https://scholarship-tracker.netlify.app/
+(Currently optimized for light mode, dark mode coming soon!)
 
 ## Key features and functionality
 
