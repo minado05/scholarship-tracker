@@ -1,7 +1,7 @@
 # Project Summary
 
 This project aims to make keeping track of scholarship applications more convenient for students.
-Note: Please use with light mode for a better experience. 
+Note: Please use with light mode for a better experience (to be updated)
 
 ## Key features and functionality
 
@@ -10,9 +10,10 @@ Note: Please use with light mode for a better experience.
 - Form Validation: Input fields are validated before scholarship is added to table.
 - Status Tags: status tags are colored for quick visual reference.
 
-## Technologies Used
+## Tech Stack
 
 - React
+- Javascript
 - localStorage
 
 ## Instructions for use
