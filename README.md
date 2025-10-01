@@ -1,3 +1,4 @@
+(CS 81 - Intro to Javascript)
 # Project Summary
 
 This project aims to make keeping track of scholarship applications more convenient for students. Available on https://scholarship-tracker.netlify.app/
